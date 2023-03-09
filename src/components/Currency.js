@@ -12,16 +12,15 @@ const Currency=()=>{
     };
 
     return (
-        <div className='alert alert-secondary'>
-            <span>Currency:</span>
-         {
-      <select name="Currency" value={currency} onChange={event=>currencyChange(event.target.value)}>
-        <option value="£">Uk(£)</option>
-        <option value="₹">India(₹)</option>
-        <option value="€">Europe(€)</option>
-        <option value="CAD">Canada(CAD)</option>
+        <div id="Currency" className='alert alert-secondary'> 
+            <span>Currency ( </span>
+      <select className='btn btn-success dropdown-toggle' menuPlacement="right" name="Currency" id="Currency" value={currency} onChange={event=>currencyChange(event.target.value)}>
+        <option  value="$">$ Dollar</option>
+        <option  value="£">£ Pound</option>
+        <option value="€">€ Euro</option>
+        <option  value="₹">₹ Ruppee</option>
       </select>	
-}
+           <span> )</span>
         </div>
     );
 };
